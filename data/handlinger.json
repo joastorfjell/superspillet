@@ -1,5 +1,5 @@
 {
-  "valuta": "kr",
+  "valuta": "skrap",
   "innstillinger": {
     "innsjekk_per_dag": 5,
     "xp_til_niva_2": 100,
@@ -7,13 +7,13 @@
     "maks_niva": 15
   },
   "handlinger": [
-    { "navn": "Naskeri på kiosken", "niva": 1, "ventetid_min": 2, "kostnad": 0, "belonning": 40, "sjanse": 90, "xp": 3 },
-    { "navn": "Kreve inn beskyttelsespenger", "niva": 1, "ventetid_min": 60, "kostnad": 0, "belonning": 300, "sjanse": 100, "xp": 15 },
-    { "navn": "Stjele bil", "niva": 2, "ventetid_min": 15, "kostnad": 0, "belonning": 350, "sjanse": 60, "xp": 12 },
-    { "navn": "Selge smuglersprit", "niva": 3, "ventetid_min": 120, "kostnad": 400, "belonning": 1400, "sjanse": 85, "xp": 30 },
-    { "navn": "Brekke inn i lagerhall", "niva": 5, "ventetid_min": 240, "kostnad": 200, "belonning": 3000, "sjanse": 55, "xp": 60 },
-    { "navn": "Smugle varer over grensa", "niva": 7, "ventetid_min": 480, "kostnad": 2000, "belonning": 9000, "sjanse": 75, "xp": 140 },
-    { "navn": "Rane verditransport", "niva": 10, "ventetid_min": 720, "kostnad": 5000, "belonning": 30000, "sjanse": 40, "xp": 400 },
-    { "navn": "Drive ulovlig kasino", "niva": 12, "ventetid_min": 1440, "kostnad": 10000, "belonning": 45000, "sjanse": 95, "xp": 600 }
+    { "navn": "Rote i søpla (tapp!)", "niva": 1, "ventetid_min": 1, "kostnad": 0, "belonning": 15, "sjanse": 100, "xp": 2 },
+    { "navn": "Samle regnvann", "niva": 1, "ventetid_min": 30, "kostnad": 0, "belonning": 120, "sjanse": 100, "xp": 8 },
+    { "navn": "Dyrke poteter", "niva": 2, "ventetid_min": 120, "kostnad": 20, "belonning": 400, "sjanse": 95, "xp": 20 },
+    { "navn": "Jakte muterte rotter", "niva": 3, "ventetid_min": 20, "kostnad": 10, "belonning": 180, "sjanse": 70, "xp": 12 },
+    { "navn": "Plyndre ruiner", "niva": 4, "ventetid_min": 240, "kostnad": 50, "belonning": 1600, "sjanse": 60, "xp": 50 },
+    { "navn": "Reparere generator", "niva": 6, "ventetid_min": 480, "kostnad": 600, "belonning": 4000, "sjanse": 90, "xp": 120 },
+    { "navn": "Karavane til nabobosetning", "niva": 8, "ventetid_min": 720, "kostnad": 2000, "belonning": 12000, "sjanse": 75, "xp": 300 },
+    { "navn": "Ekspedisjon inn i den døde byen", "niva": 11, "ventetid_min": 1440, "kostnad": 5000, "belonning": 40000, "sjanse": 45, "xp": 700 }
   ]
 }

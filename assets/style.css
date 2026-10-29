@@ -1,17 +1,17 @@
 /* Superspillet – planleggingsbasen
-   Nordic noir: kald natt, snø, og et snev av blodrødt neon. */
+   Etter bomben: aske, rust og et giftig grønt skjær. */
 
 :root {
-  --bg: #0b1018;
-  --bg-2: #111826;
-  --panel: #141d2d;
-  --panel-2: #1a2538;
-  --line: #24324a;
-  --text: #e6ecf5;
-  --muted: #8a98b0;
-  --accent: #ff3b5c;
-  --accent-2: #ffb547;
-  --ice: #7cc8ff;
+  --bg: #12110f;
+  --bg-2: #191714;
+  --panel: #1e1b17;
+  --panel-2: #27231e;
+  --line: #3a332a;
+  --text: #ede6d8;
+  --muted: #a3978a;
+  --accent: #e2692a;
+  --accent-2: #d9e14b;
+  --glow: #8fdc5c;
   --ok: #3ddc97;
   --radius: 14px;
   --shadow: 0 10px 30px rgba(0, 0, 0, .35);
@@ -26,31 +26,31 @@ html, body { margin: 0; }
 body {
   font-family: var(--font);
   background:
-    radial-gradient(1200px 600px at 80% -10%, rgba(124, 200, 255, .10), transparent 60%),
-    radial-gradient(900px 500px at -10% 10%, rgba(255, 59, 92, .08), transparent 60%),
+    radial-gradient(1200px 600px at 80% -10%, rgba(143, 220, 92, .08), transparent 60%),
+    radial-gradient(900px 500px at -10% 10%, rgba(226, 105, 42, .10), transparent 60%),
     var(--bg);
   color: var(--text);
   line-height: 1.55;
   min-height: 100vh;
 }
 
-a { color: var(--ice); }
+a { color: var(--glow); }
 code {
   font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
   font-size: .9em;
-  background: rgba(124, 200, 255, .1);
+  background: rgba(143, 220, 92, .1);
   padding: .1em .35em;
   border-radius: 5px;
 }
 
-#snow {
+#ash {
   position: fixed;
   inset: 0;
   width: 100%;
   height: 100%;
   pointer-events: none;
   z-index: 0;
-  opacity: .55;
+  opacity: .6;
 }
 
 /* ---------- Topbar ---------- */
@@ -63,7 +63,7 @@ code {
   align-items: center;
   gap: 24px;
   padding: 12px 24px;
-  background: rgba(11, 16, 24, .82);
+  background: rgba(18, 17, 15, .85);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line);
 }
@@ -172,10 +172,10 @@ h1 { font-family: var(--display); font-weight: 400; font-size: 44px; letter-spac
   cursor: pointer;
   transition: transform .1s, border-color .15s, background .15s;
 }
-.btn:hover { border-color: var(--ice); }
+.btn:hover { border-color: var(--glow); }
 .btn:active { transform: scale(.97); }
 .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
-.btn.primary:hover { background: #ff5574; }
+.btn.primary:hover { background: #ee7d40; }
 .btn.ghost { background: transparent; }
 
 /* ---------- Hjem ---------- */
@@ -183,7 +183,7 @@ h1 { font-family: var(--display); font-weight: 400; font-size: 44px; letter-spac
 .hero { padding: 24px 0 8px; max-width: 860px; }
 .hero h1 { font-size: clamp(40px, 7vw, 76px); }
 .eyebrow { color: var(--accent-2); font-weight: 600; letter-spacing: 1px; text-transform: uppercase; font-size: 12px; margin: 0 0 8px; }
-.lead { font-size: 18px; color: #c4cfe0; }
+.lead { font-size: 18px; color: #d6cbb8; }
 .hero-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
 
 .stat {
@@ -192,7 +192,7 @@ h1 { font-family: var(--display); font-weight: 400; font-size: 44px; letter-spac
   border-radius: var(--radius);
   padding: 18px 20px;
 }
-.stat-num { display: block; font-family: var(--display); font-size: 48px; line-height: 1; color: var(--ice); }
+.stat-num { display: block; font-family: var(--display); font-size: 48px; line-height: 1; color: var(--glow); }
 .stat-label { color: var(--muted); font-size: 14px; }
 
 .pillars { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; }
@@ -220,7 +220,7 @@ h1 { font-family: var(--display); font-weight: 400; font-size: 44px; letter-spac
 .commit-list .msg { font-weight: 500; }
 .commit-list .meta { color: var(--muted); font-size: 12px; }
 .commit-list a, .top-list a { color: var(--text); text-decoration: none; }
-.commit-list a:hover, .top-list a:hover { color: var(--ice); }
+.commit-list a:hover, .top-list a:hover { color: var(--glow); }
 .top-list .votes { min-width: 46px; font-weight: 700; color: var(--accent-2); }
 
 /* ---------- Idétavle ---------- */
@@ -254,7 +254,7 @@ h1 { font-family: var(--display); font-weight: 400; font-size: 44px; letter-spac
   text-decoration: none;
   transition: transform .12s, border-color .12s;
 }
-.card:hover { transform: translateY(-2px); border-color: var(--ice); }
+.card:hover { transform: translateY(-2px); border-color: var(--glow); }
 .card .title { font-weight: 600; font-size: 14px; }
 .card .num { color: var(--muted); font-weight: 400; }
 .card .labels { display: flex; gap: 4px; flex-wrap: wrap; margin: 8px 0; }
@@ -285,9 +285,9 @@ h1 { font-family: var(--display); font-weight: 400; font-size: 44px; letter-spac
 .markdown table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 14px; }
 .markdown th, .markdown td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; }
 .markdown th { background: var(--panel-2); }
-.markdown pre { background: #0a0f17; border: 1px solid var(--line); border-radius: 10px; padding: 14px; overflow-x: auto; }
+.markdown pre { background: #0f0e0c; border: 1px solid var(--line); border-radius: 10px; padding: 14px; overflow-x: auto; }
 .markdown pre code { background: none; padding: 0; }
-.markdown blockquote { margin: 16px 0; padding: 8px 16px; border-left: 3px solid var(--accent-2); background: rgba(255, 181, 71, .06); color: #d7deea; }
+.markdown blockquote { margin: 16px 0; padding: 8px 16px; border-left: 3px solid var(--accent-2); background: rgba(217, 225, 75, .06); color: #e2dacb; }
 .markdown img { max-width: 100%; border-radius: 8px; }
 .markdown input[type="checkbox"] { accent-color: var(--accent); }
 
@@ -306,7 +306,7 @@ input, select {
   font: 14px var(--font);
   width: 100%;
 }
-input:focus, select:focus { outline: 2px solid var(--ice); outline-offset: -1px; }
+input:focus, select:focus { outline: 2px solid var(--glow); outline-offset: -1px; }
 .eco-controls input { width: 120px; }
 
 .table-wrap { overflow-x: auto; padding: 8px; }
@@ -314,7 +314,7 @@ input:focus, select:focus { outline: 2px solid var(--ice); outline-offset: -1px;
 .eco-table th { text-align: left; color: var(--muted); font-weight: 500; font-size: 12px; text-transform: uppercase; letter-spacing: .5px; padding: 8px; border-bottom: 1px solid var(--line); white-space: nowrap; }
 .eco-table td { padding: 6px 8px; border-bottom: 1px solid var(--line); }
 .eco-table td.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
-.eco-table td.out { color: var(--ice); font-weight: 600; }
+.eco-table td.out { color: var(--glow); font-weight: 600; }
 .eco-table input { min-width: 64px; }
 .eco-table input.wide { min-width: 170px; }
 .eco-table .del { background: none; border: 0; color: var(--muted); cursor: pointer; font-size: 16px; }
@@ -357,7 +357,7 @@ input:focus, select:focus { outline: 2px solid var(--ice); outline-offset: -1px;
   bottom: 12px;
   font-size: 13px;
   color: var(--muted);
-  background: rgba(11, 16, 24, .8);
+  background: rgba(18, 17, 15, .8);
   padding: 6px 10px;
   border-radius: 8px;
   pointer-events: none;
@@ -371,7 +371,7 @@ input:focus, select:focus { outline: 2px solid var(--ice); outline-offset: -1px;
   bottom: 24px;
   transform: translate(-50%, 20px);
   background: var(--panel-2);
-  border: 1px solid var(--ice);
+  border: 1px solid var(--glow);
   padding: 10px 18px;
   border-radius: 999px;
   opacity: 0;

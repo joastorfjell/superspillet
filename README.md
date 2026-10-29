@@ -1,6 +1,6 @@
-# 🎩 Superspillet
+# ☢️ Superspillet
 
-Planleggingsbase for et online mafiaspill til mobil – tekstspill-mekanikk à la nordicmafia.no, med en isometrisk 3D-by à la *The Simpsons: Tapped Out*.
+Planleggingsbase for et postapokalyptisk online mobilspill – *Hay Day og nordicmafia.no fikk et barn etter en atomkrig*. Spilløkka fra tekstbaserte nettleserspill, produksjon og samarbeid fra Hay Day, og en isometrisk 3D-bosetning à la *The Simpsons: Tapped Out*. Alt er WIP.
 
 **Nettside:** https://joastorfjell.github.io/superspillet/
 
@@ -10,7 +10,7 @@ Planleggingsbase for et online mafiaspill til mobil – tekstspill-mekanikk à l
 |---|---|---|
 | Ideer, spørsmål, oppgaver | [Issues](https://github.com/joastorfjell/superspillet/issues) | Lag nytt issue, stem med 👍, diskuter i kommentarer |
 | Design-dokumenter | [`docs/`](docs/) | Rediger Markdown-filer, commit og push |
-| Handlinger, ventetider, belønning | [`data/handlinger.json`](data/handlinger.json) | Lek i fanen *Tid & økonomi* → Kopier JSON → commit |
+| Handlinger, ventetider, belønning (skrap) | [`data/handlinger.json`](data/handlinger.json) | Lek i fanen *Tid & økonomi* → Kopier JSON → commit |
 | Bygg til byplanleggeren | [`data/bygninger.json`](data/bygninger.json) | Rediger JSON, commit og push |
 | Selve nettsiden | `index.html`, `assets/` | Ren HTML/CSS/JS – ingen byggesteg |
 

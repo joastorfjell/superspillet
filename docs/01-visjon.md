@@ -1,29 +1,31 @@
 # Visjon
 
 > **Arbeidstittel:** Superspillet (vi finner et bedre navn senere – foreslå i idétavla!)
+>
+> ⚠️ Alt her er WIP. Ingenting er spikret.
 
 ## Kort fortalt
 
-En **online mafia-RPG** i ånden til tekstbaserte nettleserspill som [nordicmafia.no](https://nordicmafia.no) – krim med nedkjøling, rank, fengsel, familier og rivalisering mellom ekte spillere – men med en **isometrisk 3D-by** du bygger ut og ser vokse, slik som i *The Simpsons: Tapped Out*.
+**Hay Day og nordicmafia.no fikk et barn etter en atomkrig.**
 
-Tekstspillene har dyp, sosial og nådeløs spillmekanikk, men ser ut som et regneark. Bybyggerspillene ser fantastiske ut, men er ofte ensomme og harmløse. **Vi vil ha begge deler.**
+En postapokalyptisk verden der spillerne må skrape sammen et levebrød, bygge opp en bosetning, samarbeide med andre overlevende og bli sterkere over tid. Du ser bosetningen din som en **isometrisk 3D-by**, à la *The Simpsons: Tapped Out* og *Hay Day*.
 
-## Elevator pitch (utkast – skriv om!)
-
-*"Du starter som en småkriminell med en kiosk og et hull av en leilighet. Hver krim du gjør tar ekte tid. Hvert bygg du kjøper vises i byen din. Andre spillere er både dine beste allierte og dine farligste fiender."*
-
-## Inspirasjon
+## Hva vi låner fra hvem
 
 | Spill | Hva vi tar med oss |
 |---|---|
-| nordicmafia.no og lignende tekstbaserte mafiaspill | Krim med nedkjøling, rank/nivå, fengsel og utbrytning, familier, kuler/drap, smugling mellom byer, kasino |
-| The Simpsons: Tapped Out | Isometrisk by, bygg som "produserer" over tid, oppdrag som låser opp nytt innhold, humor |
-| Clash of Clans | Angrep på andre spilleres base, klaner, byggetid som ressurs |
-| Hay Day | Rolig "kom tilbake og høst"-rytme, handel mellom spillere |
+| **nordicmafia.no** (og lignende tekstspill) | Gameplay-løkka: handlinger med nedkjøling, sjanse for å lykkes, rank/nivå, mange korte innsjekk, samspill med ekte spillere. *Ikke* mafia-temaet. |
+| **Hay Day** | Produksjon som tar tid, kjeder av ressurser (hvete → mel → brød), handel mellom spillere, koselig "kom tilbake og høst"-rytme |
+| **The Simpsons: Tapped Out** | Isometrisk by, bygg som produserer over tid, oppdrag som låser opp nytt innhold, humor |
+| **Cookie Clicker** | Tapp for å samle litt ekstra, oppgraderinger som ganger opp inntekten, tallene som vokser |
+
+## Elevator pitch (utkast – skriv om!)
+
+*"Du kryper ut av en bunker til en ødelagt verden. Med en skraphaug, et drivhus og litt flaks bygger du opp en bosetning – sammen med andre overlevende. Alt tar tid. Alt kan oppgraderes. Ingen klarer seg alene."*
 
 ## Det vi IKKE vet ennå
 
-- Setting (tid og sted) – se [settingforslagene](03-sjangeren.md) og stem i idétavla
-- Tone: seriøs noir, humoristisk, eller et sted midt imellom?
-- Hvor hardt PvP: kan du miste alt, eller bare litt?
+- Hvor og når: Norge? Hvor lenge etter katastrofen?
+- Tone: dyster, humoristisk (à la Tapped Out), eller et sted midt imellom?
+- Hvor mye konkurranse versus samarbeid mellom spillerne
 - Hvordan spillet tjener penger (om det skal det)

@@ -130,10 +130,10 @@ function route() {
 
 window.addEventListener('hashchange', route);
 
-// ---------- Snø ----------
+// ---------- Aske ----------
 
-function initSnow() {
-  const canvas = $('#snow');
+function initAsh() {
+  const canvas = $('#ash');
   const ctx = canvas.getContext('2d');
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   let flakes = [];
@@ -147,12 +147,13 @@ function initSnow() {
       r: Math.random() * 1.8 + 0.4,
       s: Math.random() * 0.6 + 0.2,
       w: Math.random() * Math.PI * 2,
+      ember: Math.random() < 0.08,
     }));
   }
   function tick() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = '#dfefff';
     for (const f of flakes) {
+      ctx.fillStyle = f.ember ? '#ff9a4a' : '#b9b2a6';
       f.y += f.s;
       f.w += 0.01;
       f.x += Math.sin(f.w) * 0.3;
@@ -231,7 +232,7 @@ async function initBoard(fresh = false) {
   board.issues.forEach((i) => i.labels.forEach((l) => {
     if (!STATUS_LABELS.includes(l.name)) labels.set(l.name, l.color);
   }));
-  const chips = [['Alle', null, 'ff3b5c'], ...[...labels].map(([name, color]) => [name, name, color])];
+  const chips = [['Alle', null, 'e2692a'], ...[...labels].map(([name, color]) => [name, name, color])];
   $('#label-filter').innerHTML = chips.map(([text, value, color]) =>
     `<button class="chip${board.filter === value ? ' active' : ''}" data-value="${esc(value ?? '')}" style="--chip:#${color}">${esc(text)}</button>`,
   ).join('');
@@ -278,7 +279,7 @@ $('#refresh-issues').addEventListener('click', () => initBoard(true));
 
 // ---------- Dokumenter ----------
 
-const FALLBACK_DOCS = ['01-visjon.md', '02-krav.md', '03-sjangeren.md', '04-teknologi.md', '05-veikart.md', 'LAER-GIT.md', 'team.md'];
+const FALLBACK_DOCS = ['01-visjon.md', '02-krav.md', '03-spillokka.md', '04-teknologi.md', '05-veikart.md', 'LAER-GIT.md', 'team.md'];
 let docFiles = null;
 
 async function initDocs() {
@@ -295,7 +296,7 @@ async function initDocs() {
 
 function docTitle(file) {
   return file.replace(/\.md$/, '').replace(/^\d+-/, '').replace(/[-_]/g, ' ')
-    .replace(/^./, (c) => c.toUpperCase()).replace('LAER GIT', 'Lær Git');
+    .replace(/^./, (c) => c.toUpperCase()).replace('LAER GIT', 'Lær Git').replace('Spillokka', 'Spilløkka');
 }
 
 function renderDocList(active) {
@@ -572,7 +573,7 @@ async function initCity() {
   }
   city.placed = city.placed.filter((p) => city.types.has(p.id));
 
-  const tools = [{ id: '__riv', navn: 'Riv', farge: '#ff3b5c', ikon: '🧹' }, ...data.bygninger];
+  const tools = [{ id: '__riv', navn: 'Riv', farge: '#c0392b', ikon: '🧹' }, ...data.bygninger];
   $('#palette').innerHTML = tools.map((b) => `<button class="tool" data-id="${b.id}" title="${esc(b.beskrivelse ?? '')}">
     <span class="swatch" style="background:${b.farge}">${b.ikon ?? ''}</span>
     <span>${esc(b.navn)}${b.bredde ? `<small>${b.bredde}×${b.dybde} · nivå ${b.niva ?? 1}</small>` : '<small>klikk på et bygg</small>'}</span>
@@ -712,7 +713,6 @@ function drawBox(p, type, alpha = 1, tint = null) {
     poly([[cx - 2, cy], [cx + 2, cy], [cx + 2, cy - s * 0.5], [cx - 2, cy - s * 0.5]], '#4a3523');
     poly([[cx - s, cy - s * 0.4], [cx + s, cy - s * 0.4], [cx, cy - s * 1.9]], shade(color, -0.05));
     poly([[cx - s * 0.75, cy - s * 1.1], [cx + s * 0.75, cy - s * 1.1], [cx, cy - s * 2.6]], color);
-    poly([[cx - s * 0.3, cy - s * 2.1], [cx + s * 0.3, cy - s * 2.1], [cx, cy - s * 2.6]], '#eaf4ff');
     ctx.globalAlpha = 1;
     return;
   }
@@ -742,7 +742,7 @@ function drawBox(p, type, alpha = 1, tint = null) {
           const u0 = (u + 0.3) / 2, u1 = (u + 0.7) / 2;
           const v0 = (fl + 0.35) * city.th, v1 = (fl + 0.75) * city.th;
           const pt = (uu, vv) => [f.a[0] + f.ex * uu, f.a[1] + f.ey * uu - vv];
-          poly([pt(u0, v0), pt(u1, v0), pt(u1, v1), pt(u0, v1)], lit ? 'rgba(255,214,120,.85)' : 'rgba(10,15,25,.45)');
+          poly([pt(u0, v0), pt(u1, v0), pt(u1, v1), pt(u0, v1)], lit ? 'rgba(255,214,120,.85)' : 'rgba(15,12,10,.5)');
         }
       }
     }
@@ -759,14 +759,14 @@ function drawCity() {
   // Bakke
   for (let x = 0; x < n; x++) {
     for (let y = 0; y < n; y++) {
-      const snow = hash(x, y, 3) > 0.8;
+      const rubble = hash(x, y, 3) > 0.8;
       poly([iso(x, y), iso(x + 1, y), iso(x + 1, y + 1), iso(x, y + 1)],
-        snow ? '#22304a' : '#1b2638', 'rgba(124,200,255,.07)');
+        rubble ? '#352e25' : '#2b2620', 'rgba(226,105,42,.08)');
     }
   }
   // Kant på brettet
-  poly([iso(0, n), iso(n, n), [iso(n, n)[0], iso(n, n)[1] + 10], [iso(0, n)[0], iso(0, n)[1] + 10]], '#0d1420');
-  poly([iso(n, 0), iso(n, n), [iso(n, n)[0], iso(n, n)[1] + 10], [iso(n, 0)[0], iso(n, 0)[1] + 10]], '#080d16');
+  poly([iso(0, n), iso(n, n), [iso(n, n)[0], iso(n, n)[1] + 10], [iso(0, n)[0], iso(0, n)[1] + 10]], '#1a1611');
+  poly([iso(n, 0), iso(n, n), [iso(n, n)[0], iso(n, n)[1] + 10], [iso(n, 0)[0], iso(n, 0)[1] + 10]], '#100e0b');
 
   // Bygg: tegn bakerst først
   const items = city.placed.map((p) => ({ p, t: city.types.get(p.id) }));
@@ -788,7 +788,7 @@ function drawCity() {
 
   const counts = {};
   city.placed.forEach((p) => { counts[p.id] = (counts[p.id] ?? 0) + 1; });
-  ctx.fillStyle = '#8a98b0';
+  ctx.fillStyle = '#a3978a';
   ctx.font = '12px Inter, sans-serif';
   ctx.fillText(`${city.placed.length} ting plassert`, 14, 22);
 }
@@ -814,5 +814,5 @@ $('#city-copy').addEventListener('click', () =>
 $('#repo-link').href = REPO_URL;
 $('#new-idea-link').href = `${REPO_URL}/issues/new?template=ide.yml`;
 $('#new-issue-link').href = `${REPO_URL}/issues/new/choose`;
-initSnow();
+initAsh();
 route();

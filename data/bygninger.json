@@ -1,18 +1,19 @@
 {
   "rutenett": 14,
   "bygninger": [
-    { "id": "vei", "navn": "Vei", "farge": "#3a4558", "bredde": 1, "dybde": 1, "hoyde": 0, "niva": 1, "beskrivelse": "Dra for å tegne gater." },
-    { "id": "vann", "navn": "Havn / vann", "farge": "#1d4e7a", "bredde": 1, "dybde": 1, "hoyde": 0, "niva": 1, "beskrivelse": "Kaikant og kanaler." },
-    { "id": "gran", "navn": "Gran", "farge": "#1f5a43", "bredde": 1, "dybde": 1, "hoyde": 1, "form": "tre", "niva": 1, "beskrivelse": "Snødekket gran. Pynt." },
-    { "id": "hk", "navn": "Hovedkvarter", "farge": "#7a2b3a", "bredde": 2, "dybde": 2, "hoyde": 3, "niva": 1, "beskrivelse": "Familiens base. Alt starter her." },
-    { "id": "kiosk", "navn": "Kiosk", "farge": "#c9a227", "bredde": 1, "dybde": 1, "hoyde": 1, "niva": 1, "beskrivelse": "Lite, men gir jevn inntekt." },
-    { "id": "bar", "navn": "Brun bar", "farge": "#8a5a3c", "bredde": 2, "dybde": 1, "hoyde": 2, "niva": 2, "beskrivelse": "Møteplass for rekrutter og rykter." },
-    { "id": "verksted", "navn": "Bilverksted", "farge": "#4d6b7a", "bredde": 2, "dybde": 2, "hoyde": 1, "niva": 2, "beskrivelse": "Omlakkering av stjålne biler." },
-    { "id": "pant", "navn": "Pantelåner", "farge": "#6b4c8a", "bredde": 1, "dybde": 1, "hoyde": 2, "niva": 3, "beskrivelse": "Selger tyvegods. Låner ut penger." },
-    { "id": "blokk", "navn": "Boligblokk", "farge": "#5a6475", "bredde": 2, "dybde": 2, "hoyde": 5, "niva": 4, "beskrivelse": "Gjemmesteder og leieinntekter." },
-    { "id": "lager", "navn": "Lagerhall på kaia", "farge": "#6e5a44", "bredde": 3, "dybde": 2, "hoyde": 2, "niva": 5, "beskrivelse": "Til smuglervarer. Bør ligge ved vann." },
-    { "id": "fengsel", "navn": "Fengsel", "farge": "#3d4a5c", "bredde": 3, "dybde": 3, "hoyde": 2, "niva": 6, "beskrivelse": "Der du havner når krimmen feiler." },
-    { "id": "kasino", "navn": "Kasino", "farge": "#b0263f", "bredde": 3, "dybde": 3, "hoyde": 4, "niva": 12, "beskrivelse": "Sluttspillet. Hvitvasking i stor skala." },
-    { "id": "fyr", "navn": "Fyrtårn", "farge": "#d8dde6", "bredde": 1, "dybde": 1, "hoyde": 6, "niva": 8, "beskrivelse": "Smuglernes landemerke.", "uten_vinduer": true }
+    { "id": "vei", "navn": "Sprukket vei", "farge": "#4a443d", "bredde": 1, "dybde": 1, "hoyde": 0, "niva": 1, "beskrivelse": "Dra for å tegne veier." },
+    { "id": "vann", "navn": "Giftig vann", "farge": "#3d6b3a", "bredde": 1, "dybde": 1, "hoyde": 0, "niva": 1, "beskrivelse": "Ikke drikk det. Kan renses senere?" },
+    { "id": "straling", "navn": "Strålingssone", "farge": "#8a8a24", "bredde": 1, "dybde": 1, "hoyde": 0, "niva": 1, "beskrivelse": "Farlig område som må ryddes før man kan bygge." },
+    { "id": "furu", "navn": "Mutert furu", "farge": "#56622c", "bredde": 1, "dybde": 1, "hoyde": 1, "form": "tre", "niva": 1, "beskrivelse": "Overlevde på et vis. Pynt." },
+    { "id": "bunker", "navn": "Bunker", "farge": "#6b6e66", "bredde": 2, "dybde": 2, "hoyde": 2, "niva": 1, "beskrivelse": "Startbasen. Alt begynner her." },
+    { "id": "skrap", "navn": "Skraphaug", "farge": "#7a5a3a", "bredde": 2, "dybde": 2, "hoyde": 1, "niva": 1, "beskrivelse": "Tapp for å rote etter skrap.", "uten_vinduer": true },
+    { "id": "drivhus", "navn": "Drivhus", "farge": "#5f9a6a", "bredde": 2, "dybde": 1, "hoyde": 1, "niva": 2, "beskrivelse": "Dyrk mat. Tar tid, men gir jevnt." },
+    { "id": "vanntarn", "navn": "Vanntårn", "farge": "#8a6a4a", "bredde": 1, "dybde": 1, "hoyde": 3, "niva": 2, "beskrivelse": "Samler og renser regnvann.", "uten_vinduer": true },
+    { "id": "brakke", "navn": "Brakke", "farge": "#6a5a48", "bredde": 2, "dybde": 1, "hoyde": 2, "niva": 3, "beskrivelse": "Plass til flere overlevende." },
+    { "id": "verksted", "navn": "Verksted", "farge": "#5a6a7a", "bredde": 2, "dybde": 2, "hoyde": 2, "niva": 4, "beskrivelse": "Gjør skrap om til nyttige ting." },
+    { "id": "handel", "navn": "Handelspost", "farge": "#a8642a", "bredde": 2, "dybde": 2, "hoyde": 2, "niva": 5, "beskrivelse": "Byttehandel med andre spillere." },
+    { "id": "ruin", "navn": "Ruin av høyblokk", "farge": "#4a4a50", "bredde": 2, "dybde": 2, "hoyde": 5, "niva": 1, "beskrivelse": "Kan plyndres – eller rives for å få plass." },
+    { "id": "radio", "navn": "Radiomast", "farge": "#9aa0a6", "bredde": 1, "dybde": 1, "hoyde": 6, "niva": 7, "beskrivelse": "Kontakt med andre bosetninger.", "uten_vinduer": true },
+    { "id": "reaktor", "navn": "Reaktor", "farge": "#3f7a4a", "bredde": 3, "dybde": 3, "hoyde": 4, "niva": 12, "beskrivelse": "Sluttspillet: strøm til hele bosetningen." }
   ]
 }

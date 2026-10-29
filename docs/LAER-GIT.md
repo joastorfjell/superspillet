@@ -7,7 +7,7 @@ Git er et system for å **lagre versjoner** av filer og **samarbeide** uten å o
 | Ord | Hva det betyr |
 |---|---|
 | **Repo** | Prosjektmappa, med hele historikken |
-| **Commit** | Et lagringspunkt med en beskjed om hva du endret ("Legg til kasino i bygninger.json") |
+| **Commit** | Et lagringspunkt med en beskjed om hva du endret ("Legg til vanntårn i bygninger.json") |
 | **Branch** | En parallell versjon der du kan jobbe uten å ødelegge for andre |
 | **Push** | Send dine commits opp til GitHub |
 | **Pull** | Hent andres commits ned til deg |

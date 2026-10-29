@@ -15,8 +15,8 @@ Ingenting er bestemt! Dette er en oversikt over alternativer.
 
 Siden spillet er online og bruker ventetid, **må** serveren være sjefen:
 
-- Serveren bestemmer når en krim er ferdig (telefonens klokke kan man jukse med)
-- Serveren regner ut om en krim lykkes
+- Serveren bestemmer når en handling er ferdig (telefonens klokke kan man jukse med)
+- Serveren regner ut om en ekspedisjon lykkes
 - Klienten (appen) viser bare det serveren sier
 
 | Alternativ | Kommentar |
@@ -29,4 +29,4 @@ Siden spillet er online og bruker ventetid, **må** serveren være sjefen:
 ## Forslag til første prototype
 
 Bygg den **enkleste mulige** versjonen for å teste om løkka er gøy:
-en knapp for å gjøre krim, en nedtelling, penger som går opp. Ingen grafikk. Så legger vi på by og multiplayer.
+en knapp for å rote i søpla, en nedtelling, skrap som går opp. Ingen grafikk. Så legger vi på by og multiplayer.
