@@ -1,0 +1,19 @@
+name: ❓ Spørsmål / beslutning
+description: Noe vi må bestemme sammen
+title: "[Spørsmål] "
+labels: ["spørsmål"]
+body:
+  - type: textarea
+    id: sporsmal
+    attributes:
+      label: Hva må vi bestemme?
+    validations:
+      required: true
+  - type: textarea
+    id: alternativer
+    attributes:
+      label: Alternativer
+      description: List opp mulighetene, gjerne med fordeler og ulemper.
+      placeholder: |
+        1. ...
+        2. ...

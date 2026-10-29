@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Superspillet · Planleggingsbasen</title>
+  <meta name="description" content="Felles planleggingsverktøy for Superspillet – et isometrisk mobilspill med mafia-vibber.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎩</text></svg>">
+</head>
+<body>
+  <canvas id="snow" aria-hidden="true"></canvas>
+
+  <header class="topbar">
+    <a class="brand" href="#/hjem">
+      <span class="brand-mark">🎩</span>
+      <span class="brand-text">SUPERSPILLET<small>planleggingsbasen</small></span>
+    </a>
+    <nav class="tabs" id="tabs">
+      <a href="#/hjem" data-route="hjem">Hjem</a>
+      <a href="#/tavle" data-route="tavle">Idétavle</a>
+      <a href="#/dokumenter" data-route="dokumenter">Dokumenter</a>
+      <a href="#/okonomi" data-route="okonomi">Tid &amp; økonomi</a>
+      <a href="#/by" data-route="by">Byplanlegger</a>
+    </nav>
+  </header>
+
+  <main id="app">
+    <!-- HJEM -->
+    <section class="view" id="view-hjem">
+      <div class="hero">
+        <p class="eyebrow">Arbeidstittel · inspirert av nordicmafia.no + Tapped Out</p>
+        <h1>Et online mafiaspill – med en by du faktisk kan se.</h1>
+        <p class="lead">Dette er basen vår. Ideer og spørsmål lever som <em>issues</em> på GitHub, design-dokumenter som Markdown i <code>docs/</code>, og tall som JSON i <code>data/</code>. Alt du ser her bygges fra repoet – endrer du en fil og pusher, oppdateres siden.</p>
+        <div class="hero-actions">
+          <a class="btn primary" id="new-idea-link" target="_blank" rel="noopener">+ Ny idé</a>
+          <a class="btn" id="repo-link" target="_blank" rel="noopener">Åpne repoet</a>
+          <a class="btn ghost" href="#/dokumenter/LAER-GIT.md">Lær Git på 10 min</a>
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <div class="stat"><span class="stat-num" id="stat-open">–</span><span class="stat-label">åpne ideer &amp; spørsmål</span></div>
+        <div class="stat"><span class="stat-num" id="stat-decided">–</span><span class="stat-label">beslutninger tatt</span></div>
+        <div class="stat"><span class="stat-num" id="stat-commits">–</span><span class="stat-label">commits så langt</span></div>
+      </div>
+
+      <h2 class="section-title">Det vi vet</h2>
+      <div class="pillars">
+        <div class="pillar"><span>📱</span><h3>Mobil først</h3><p>Korte økter, tommelvennlig UI, fungerer i stående modus.</p></div>
+        <div class="pillar"><span>🌐</span><h3>Online / multiplayer</h3><p>Spillere påvirker hverandre – handel, allianser, rivalisering.</p></div>
+        <div class="pillar"><span>⏳</span><h3>Venting er en mekanikk</h3><p>Handlinger tar ekte tid. Du kommer tilbake for å høste.</p></div>
+        <div class="pillar"><span>🔓</span><h3>Lås opp ting</h3><p>Nye bygg, handlinger og områder åpner seg etter hvert.</p></div>
+        <div class="pillar"><span>🏙️</span><h3>Isometrisk 3D</h3><p>Levende by sett ovenfra på skrå, à la Tapped Out.</p></div>
+        <div class="pillar unknown"><span>❓</span><h3>Setting &amp; plott</h3><p>Helt åpent! Stem på forslag i <a href="#/tavle">idétavla</a>.</p></div>
+      </div>
+
+      <div class="two-col">
+        <div class="panel">
+          <h2 class="section-title">Siste endringer i repoet</h2>
+          <ul class="commit-list" id="commit-list"><li class="muted">Laster …</li></ul>
+        </div>
+        <div class="panel">
+          <h2 class="section-title">Mest populære ideer</h2>
+          <ul class="top-list" id="top-list"><li class="muted">Laster …</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- IDÉTAVLE -->
+    <section class="view" id="view-tavle">
+      <div class="view-head">
+        <div>
+          <h1>Idétavle</h1>
+          <p class="muted">Hentet live fra GitHub Issues. Stem med 👍 på issuet, diskuter i kommentarene. Flytt kort ved å sette label <code>diskuteres</code> / <code>bestemt</code>, eller lukke issuet.</p>
+        </div>
+        <div class="row">
+          <button class="btn ghost" id="refresh-issues" title="Hent på nytt">↻</button>
+          <a class="btn primary" id="new-issue-link" target="_blank" rel="noopener">+ Ny</a>
+        </div>
+      </div>
+      <div class="chips" id="label-filter"></div>
+      <div class="board" id="board"></div>
+    </section>
+
+    <!-- DOKUMENTER -->
+    <section class="view" id="view-dokumenter">
+      <div class="docs-layout">
+        <aside class="docs-nav">
+          <h2 class="section-title">Dokumenter</h2>
+          <ul id="docs-list"><li class="muted">Laster …</li></ul>
+          <p class="hint">Legg til en ny <code>.md</code>-fil i <code>docs/</code>, push, og den dukker opp her.</p>
+        </aside>
+        <article class="doc markdown" id="doc-body"></article>
+      </div>
+    </section>
+
+    <!-- ØKONOMI -->
+    <section class="view" id="view-okonomi">
+      <div class="view-head">
+        <div>
+          <h1>Tid &amp; økonomi</h1>
+          <p class="muted">Lek med ventetider, belønninger og opplåsing. Data hentes fra <code>data/handlinger.json</code>. Endringer lagres bare i din nettleser – trykk <strong>Kopier JSON</strong> og commit filen når dere er fornøyde.</p>
+        </div>
+        <div class="row">
+          <button class="btn ghost" id="eco-reset">Tilbakestill</button>
+          <button class="btn" id="eco-add">+ Handling</button>
+          <button class="btn primary" id="eco-copy">Kopier JSON</button>
+        </div>
+      </div>
+
+      <div class="eco-controls panel">
+        <label>Innsjekk per dag <input type="number" id="eco-checkins" min="1" max="96" value="5"></label>
+        <label>XP til nivå 2 <input type="number" id="eco-xpbase" min="1" value="100"></label>
+        <label>XP-vekst per nivå <input type="number" id="eco-xpgrowth" min="1" step="0.05" value="1.35"></label>
+        <label>Maks nivå <input type="number" id="eco-maxlevel" min="2" max="60" value="15"></label>
+        <p class="hint">Antar at spilleren sjekker inn jevnt fordelt gjennom døgnet og starter alle tilgjengelige handlinger hver gang.</p>
+      </div>
+
+      <div class="table-wrap panel">
+        <table class="eco-table" id="eco-table"></table>
+      </div>
+
+      <div class="two-col">
+        <div class="panel">
+          <h2 class="section-title">Progresjon (simulert)</h2>
+          <table class="eco-table compact" id="eco-progress"></table>
+        </div>
+        <div class="panel">
+          <h2 class="section-title">Inntekt per dag på hvert nivå</h2>
+          <div class="bars" id="eco-bars"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BYPLANLEGGER -->
+    <section class="view" id="view-by">
+      <div class="view-head">
+        <div>
+          <h1>Byplanlegger</h1>
+          <p class="muted">Skisser hvordan byen kan se ut. Bygg defineres i <code>data/bygninger.json</code>. Del en layout med lenke-knappen.</p>
+        </div>
+        <div class="row">
+          <button class="btn ghost" id="city-clear">Tøm</button>
+          <button class="btn" id="city-share">🔗 Del lenke</button>
+          <button class="btn primary" id="city-copy">Kopier JSON</button>
+        </div>
+      </div>
+      <div class="city-layout">
+        <div class="palette panel" id="palette"></div>
+        <div class="city-stage panel">
+          <canvas id="city"></canvas>
+          <div class="city-tip" id="city-tip"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked@12/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3/dist/purify.min.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

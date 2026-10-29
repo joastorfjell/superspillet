@@ -1,0 +1,16 @@
+name: ✅ Oppgave
+description: Noe konkret som skal gjøres
+title: "[Oppgave] "
+labels: ["oppgave"]
+body:
+  - type: textarea
+    id: oppgave
+    attributes:
+      label: Hva skal gjøres?
+    validations:
+      required: true
+  - type: textarea
+    id: ferdig
+    attributes:
+      label: Når er den ferdig?
+      placeholder: "- [ ] ..."

@@ -1,0 +1,19 @@
+{
+  "valuta": "kr",
+  "innstillinger": {
+    "innsjekk_per_dag": 5,
+    "xp_til_niva_2": 100,
+    "xp_vekst_per_niva": 1.35,
+    "maks_niva": 15
+  },
+  "handlinger": [
+    { "navn": "Naskeri på kiosken", "niva": 1, "ventetid_min": 2, "kostnad": 0, "belonning": 40, "sjanse": 90, "xp": 3 },
+    { "navn": "Kreve inn beskyttelsespenger", "niva": 1, "ventetid_min": 60, "kostnad": 0, "belonning": 300, "sjanse": 100, "xp": 15 },
+    { "navn": "Stjele bil", "niva": 2, "ventetid_min": 15, "kostnad": 0, "belonning": 350, "sjanse": 60, "xp": 12 },
+    { "navn": "Selge smuglersprit", "niva": 3, "ventetid_min": 120, "kostnad": 400, "belonning": 1400, "sjanse": 85, "xp": 30 },
+    { "navn": "Brekke inn i lagerhall", "niva": 5, "ventetid_min": 240, "kostnad": 200, "belonning": 3000, "sjanse": 55, "xp": 60 },
+    { "navn": "Smugle varer over grensa", "niva": 7, "ventetid_min": 480, "kostnad": 2000, "belonning": 9000, "sjanse": 75, "xp": 140 },
+    { "navn": "Rane verditransport", "niva": 10, "ventetid_min": 720, "kostnad": 5000, "belonning": 30000, "sjanse": 40, "xp": 400 },
+    { "navn": "Drive ulovlig kasino", "niva": 12, "ventetid_min": 1440, "kostnad": 10000, "belonning": 45000, "sjanse": 95, "xp": 600 }
+  ]
+}

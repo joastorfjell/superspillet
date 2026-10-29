@@ -1,0 +1,28 @@
+name: 💡 Idé
+description: En idé til spillet – stor eller liten
+title: "[Idé] "
+labels: ["idé"]
+body:
+  - type: textarea
+    id: ide
+    attributes:
+      label: Hva er idéen?
+      description: Beskriv den kort. Skisser og bilder er velkomne (dra dem inn her).
+    validations:
+      required: true
+  - type: textarea
+    id: hvorfor
+    attributes:
+      label: Hvorfor er den gøy?
+      description: Hva får spilleren til å komme tilbake?
+  - type: dropdown
+    id: omrade
+    attributes:
+      label: Område
+      options:
+        - Setting / historie
+        - Mekanikk / gameplay
+        - Multiplayer / sosialt
+        - Økonomi / progresjon
+        - Grafikk / lyd
+        - Annet
