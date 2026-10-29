@@ -689,9 +689,9 @@ function poly(points, fill, stroke) {
 
 // Deterministisk "tilfeldig" så vinduene ikke blinker ved hver tegning
 function hash(a, b, c) {
-  let h = (a * 374761393 + b * 668265263 + c * 2147483647) | 0;
-  h = (h ^ (h >> 13)) * 1274126177;
-  return ((h ^ (h >> 16)) >>> 0) / 4294967295;
+  let h = (Math.imul(a, 374761393) + Math.imul(b, 668265263) + Math.imul(c, 1442695041)) | 0;
+  h = Math.imul(h ^ (h >>> 13), 1274126177);
+  return ((h ^ (h >>> 16)) >>> 0) / 4294967295;
 }
 
 function drawBox(p, type, alpha = 1, tint = null) {
